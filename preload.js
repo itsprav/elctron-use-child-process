@@ -11,9 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-window.openGaeme = function() {
+window.openGaeme = function(executablePath) {
   var child = require('child_process').execFile;
-  var executablePath = "D:\\Games\\GAMEFOLDER\\GAMENAME.exe";
   child(executablePath, function(err, data) {
   if(err){
   console.error(err);
